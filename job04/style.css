@@ -1,0 +1,153 @@
+main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.square{
+  background-color:#88c1d0 ;
+  border: black 3px solid;
+  position: relative;
+  width: 25%;
+  height: 50%;
+  padding: 5%;
+  margin:5%
+}
+
+@media screen and (max-width: 1599px){
+  main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 150px;
+
+  }
+  
+  .square{
+    width: 25%;
+    margin-left: 30%;
+    padding: 10%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  main{
+    display: flex;
+    flex-direction: column;
+  }    
+
+  .square{
+    width: 50%;
+    height: 30vh;
+    margin: 100px;
+  }
+}
+
+
+
+/*######################*/
+/*header/navbar*/
+/*######################*/
+header{
+  background-color: #88c1d0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#menu_general{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin-left: 30%;
+  font-size: 30px;
+}
+
+#menu_general li{
+  padding: 0 25px;
+}
+
+
+
+
+
+#menu_variation {
+  display: none; /* Masque la case à cocher par défaut */
+}
+  
+#burger {
+  cursor: pointer;
+  display: flex;
+  font-size: 24px;
+  margin-top: -15%;
+  padding: 7%;
+  width:10%;
+  background-color: #333;
+  color: #fff;
+  display: none;
+}
+  
+#menu_variation:checked + label #burger::before {
+  content: '\2715'; /* Affiche une croix (X) lorsque la case est cochée */
+}
+  
+#menu {
+  display: none; /* Masque le menu par défaut */
+}
+  
+
+
+
+
+
+
+
+
+@media screen and (max-width:767px ) {
+  #menu_variation {
+    display: none; /* Masque la case à cocher par défaut */
+  }
+  
+  #burger {
+    cursor: pointer;
+    display: flex;
+    font-size: 24px;
+    margin-top: -85%;
+    padding: 18%;
+    width:100%;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  p{
+    font-size: 1em;
+  }
+
+  #menu_variation:checked + label #burger::before {
+    content: '\2715'; /* Affiche une croix (X) lorsque la case est cochée */
+  }
+
+  #menu_variation:checked + label #menu {
+    display: block; /* Affiche le menu lorsque la case est cochée */
+  }
+  
+  
+  #menu li{
+    padding-left: 30px;
+  } 
+
+  #menu ul li{
+    display: inline;
+    justify-content: space-around;
+    font-size: 1.3em;
+  }
+
+
+  #menu_general li{
+    padding: 0 25px;
+    display: none;
+  }
+
+
+}

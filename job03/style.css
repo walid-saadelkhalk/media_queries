@@ -1,0 +1,43 @@
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.square{
+    background-color:#88c1d0 ;
+    border: black 3px solid;
+    position: relative;
+    width: 25%;
+    height: 50%;
+    padding: 5%;
+    margin:5%
+}
+
+@media screen and (max-width: 1599px){
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 150px;
+
+    }
+    
+    .square{
+        width: 25%;
+        margin-left: 30%;
+        padding: 10%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }    
+
+    .square{
+        width: 50%;
+        height: 30vh;
+        margin: 200px;
+    }
+}
